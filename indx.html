@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mil Delicias</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fff0f6;
+}
+
+/* NAV */
+nav{
+    background:linear-gradient(90deg,#f8bbd0,#d4af37);
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    margin:5px;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:#d4af37;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* SECCIONES */
+section{
+    display:none;
+    padding:40px;
+    min-height:100vh;
+}
+
+.active{
+    display:block;
+}
+
+/* ================= INICIO ================= */
+#inicio{
+    background:#f8bbd0;
+    text-align:center;
+}
+
+.bienvenidos{
+    font-size:30px;
+    font-weight:bold;
+    color:#b8860b;
+    margin-top:20px;
+}
+
+.cuadro-inicio{
+    background:rgba(255,255,255,0.6);
+    border:3px solid #d4af37;
+    padding:60px;
+    border-radius:25px;
+    display:inline-block;
+    backdrop-filter: blur(5px);
+}
+
+.logo-inicio{
+    width:180px;
+    margin-bottom:15px;
+}
+
+.cuadro-inicio h1{
+    color:#b8860b;
+    font-size:45px;
+    margin:10px 0;
+}
+
+/* ================= PRODUCTOS ================= */
+#productos{
+    background:#fff;
+    text-align:center;
+}
+
+.producto{
+    display:inline-block;
+    background:#d4af37;
+    color:white;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:10px;
+    border:3px solid #f8bbd0;
+    cursor:pointer;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* SOLO AL PASAR SE ELEVA */
+.producto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* ================= FOTOS ================= */
+#fotos{
+    background:#fce4ec;
+    text-align:center;
+}
+
+.galeria img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    margin:10px;
+    border-radius:15px;
+    border:3px solid #d4af37;
+    cursor:pointer;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* SOLO AL PASAR SE ELEVA */
+.galeria img:hover{
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= REDES ================= */
+#redes{
+    background:#fff;
+    text-align:center;
+}
+
+.whatsapp-bar{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    text-decoration:none;
+    margin:10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<button onclick="mostrar('inicio')">Inicio</button>
+<button onclick="mostrar('productos')">Productos</button>
+<button onclick="mostrar('fotos')">Fotos</button>
+<button onclick="mostrar('redes')">Redes</button>
+</nav>
+
+<section id="inicio" class="active">
+    <div class="cuadro-inicio">
+        <img class="logo-inicio" src="https://i.postimg.cc/fSwv34dh/logo.png">
+        <h1>Mil Delicias</h1>
+    </div>
+
+    <div class="bienvenidos">BIENVENIDOS ✨</div>
+</section>
+
+<section id="productos">
+    <h2>Postres caseros</h2>
+
+    <div class="producto">Pay de queso</div>
+    <div class="producto">Fresas con crema</div>
+    <div class="producto">Tarta de coco</div>
+    <div class="producto">Y muchos más</div>
+</section>
+
+<section id="fotos">
+    <h2>Galería</h2>
+
+    <div class="galeria">
+        <img src="https://i.postimg.cc/rzd3cxJq/1.jpg">
+        <img src="https://i.postimg.cc/nM65LrRy/2.jpg">
+        <img src="https://i.postimg.cc/xXQ4K7S3/3.jpg">
+        <img src="https://i.postimg.cc/nscSWDrD/4.jpg">
+        <img src="https://i.postimg.cc/ft1HkqKh/5.jpg">
+        <img src="https://i.postimg.cc/YLgdFNng/6.jpg">
+        <img src="https://i.postimg.cc/NLrJZYs0/7.jpg">
+        <img src="https://i.postimg.cc/V5bG21fD/8.jpg">
+        <img src="https://i.postimg.cc/HrT6JyQX/9.jpg">
+        <img src="https://i.postimg.cc/18RKRZQM/10.jpg">
+        <img src="https://i.postimg.cc/w1WQ7bx3/11.jpg">
+        <img src="https://i.postimg.cc/K3ynd6fR/12.jpg">
+        <img src="https://i.postimg.cc/JHcbmpYf/13.jpg">
+        <img src="https://i.postimg.cc/zyfnZSCQ/14.jpg">
+        <img src="https://i.postimg.cc/gxB3YX4w/15.jpg">
+        <img src="https://i.postimg.cc/bG7bt7K5/16.jpg">
+        <img src="https://i.postimg.cc/06wnF0xq/17.jpg">
+        <img src="https://i.postimg.cc/N9vDc2fT/18.jpg">
+    </div>
+</section>
+
+<section id="redes">
+    <h2>Redes Sociales</h2>
+
+    <a class="whatsapp-bar" href="https://wa.me/527444145152" target="_blank">
+        WhatsApp: 7444145152
+    </a>
+
+    <br>
+
+    <a href="https://www.facebook.com/share/1Nh575SQZF/" target="_blank" class="producto">
+        Facebook
+    </a>
+</section>
+
+<script>
+function mostrar(seccion){
+    let secciones = document.querySelectorAll("section");
+    secciones.forEach(s => s.classList.remove("active"));
+    document.getElementById(seccion).classList.add("active");
+}
+</script>
+
+</body>
+</html>
